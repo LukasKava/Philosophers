@@ -6,11 +6,56 @@
 /*   By: lkavalia <lkavalia@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 01:34:06 by lkavalia          #+#    #+#             */
-/*   Updated: 2022/08/30 01:54:26 by lkavalia         ###   ########.fr       */
+/*   Updated: 2022/09/05 18:07:07 by lkavalia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philosophers.h"
+
+size_t ft_strlen(const char *c)
+{
+	int i;
+
+	i = 0;
+	while (c[i] != '\0')
+		i++;
+	return (i);
+}
+
+void error_message(char *message)
+{
+	int i;
+
+	i = ft_strlen(message) + 1;
+	write(1, message, i);
+	exit(EXIT_FAILURE);
+}
+
+/*
+This function converts the string to an integer
+*/
+int ft_atoi(const char *str)
+{
+	int i;
+	int b;
+
+	i = 0;
+	b = 0;
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\r' || str[i] == '\n' || str[i] == '\v' || str[i] == '\f')
+		i++;
+	if (str[i] == '-' && str[i] != '\0')
+		error_message("ERROR: No negative numbers!\n");
+	else if (str[i] == '+')
+		i++;
+	while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
+	{
+		b = b * 10 + (str[i] - '0');
+		i++;
+	}
+	if (b == 0)
+		error_message("EEROR: value has to be more than 0!\n");
+	return (b);
+}
 
 long long get_time()
 {
@@ -20,7 +65,7 @@ long long get_time()
 		printf("ERROR(get_time() in utils.c): gettimeofday has failed!\n");
 		return (1);
 	}
-//	printf("time_stmp %ld\n", time_stmp.tv_usec / 1000);
-	return (time_stmp.tv_usec / 1000);
+//	printf("time_stmp %li\n", time_stmp.tv_usec / 1000 + time_stmp.tv_sec * 1000);
+	return ((time_stmp.tv_usec / 1000) + (time_stmp.tv_sec * 1000));
 }
 

@@ -6,7 +6,7 @@
 #    By: lkavalia <lkavalia@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/24 18:43:55 by lkavalia          #+#    #+#              #
-#    Updated: 2022/08/30 01:40:41 by lkavalia         ###   ########.fr        #
+#    Updated: 2022/09/04 20:20:45 by lkavalia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ NAME	= philo
 
 
 SRCS	= 	main.c \
+			init.c \
 			test_function.c \
 			utils.c
 
