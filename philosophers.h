@@ -6,7 +6,7 @@
 /*   By: lkavalia <lkavalia@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 18:23:37 by lkavalia          #+#    #+#             */
-/*   Updated: 2022/09/05 17:46:36 by lkavalia         ###   ########.fr       */
+/*   Updated: 2022/09/09 16:47:05 by lkavalia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,32 @@ typedef struct s_info
 typedef struct s_philosophers
 {
 	pthread_t 		philosopher;
+	int				nbr_of_philo;
 	int				index;
 	int				eaten_meals;
+	long long		t_death;
+	long long		t_eat;
+	long long		t_sleep;
+	long long		start_of_the_program;
+	long long		start_of_the_thread;
 	long long		last_time_ate;
-	pthread_mutex_t	left_fork;
-	pthread_mutex_t	right_fork;
+	pthread_mutex_t	*left_fork;
+	pthread_mutex_t	*right_fork;
 	t_info			*philo_info;
 	
 } t_philosophers;
 
-/*---- Functions from init.c ---------------------------------*/ 
+int death_checker(t_philosophers *philo);
+
+/* void		taking_right_fork(t_philosophers *philo);
+void		taking_left_fork(t_philosophers	*philo); */
+void taking_forks(t_philosophers *philo);
+
+/*---- Functions from init.c ---------------------------------*/
 void		passing_arguments(int argc, char **argv, t_info *info);
 void		init_philosophers(t_info *info, t_philosophers *philosophers);
 int			init_mutexes(t_info *info);
-int			destroy_mutexes(t_info *info);
+int			destroy_mutexes(t_info *info, t_philosophers *philo);
 
 /*---- Functions from utils.c --------------------------------*/
 size_t ft_strlen(const char *c);
