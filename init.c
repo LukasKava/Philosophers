@@ -6,7 +6,7 @@
 /*   By: lkavalia <lkavalia@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 20:19:25 by lkavalia          #+#    #+#             */
-/*   Updated: 2022/09/09 16:50:23 by lkavalia         ###   ########.fr       */
+/*   Updated: 2022/09/12 12:22:57 by lkavalia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,6 @@ void	init_philosophers(t_info *info, t_philosophers *philo)
 		philo[i].philo_info = info;
 		philo[i].start_of_the_program = info->start;
 		philo[i].nbr_of_philo = info->number_of_philo;
-	//	printf("philos->index %d\n", philo[i].index);
-	//	printf("philos %d\n", philo[i].eaten_meals);
-	//	printf("right and left forks created succesfully!\n\n");
 		i++;
 	}
 }
@@ -67,12 +64,11 @@ int init_mutexes(t_info *info)
 	}
 	while(i < info->number_of_philo)
 	{
-		if (pthread_mutex_init(info->forks, NULL) != 0)
+		if (pthread_mutex_init(&info->forks[i], NULL) != 0)
 		{
 			printf("Error(function init_mutexes): pthread_mutex_init has failed!\n");
 			return (1);
 		}
-//		printf("Fork: %d has been created!\n", i);
 		i++;
 	}
 	pthread_mutex_init(&info->message, NULL);
@@ -92,7 +88,6 @@ int	destroy_mutexes(t_info *info, t_philosophers *philo)
 			printf("Error(function destroy_mutexes): pthread_mutex_destroy has failed!\n");
 			return (1);
 		}
-	//	printf("Succesfully destroy philo %d\n", i);
 		i++;
 	}
 	pthread_mutex_destroy(philo->right_fork);

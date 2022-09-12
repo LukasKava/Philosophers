@@ -6,7 +6,7 @@
 /*   By: lkavalia <lkavalia@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 10:31:34 by lkavalia          #+#    #+#             */
-/*   Updated: 2022/09/09 17:44:12 by lkavalia         ###   ########.fr       */
+/*   Updated: 2022/09/12 12:23:18 by lkavalia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,3 @@ void	taking_forks(t_philosophers *philo)
 	printf("%lld %d Has taken a left fork\n", current_time, philo->index);
 	pthread_mutex_unlock(&philo->philo_info->message);
 }
-
-/* void taking_left_fork(t_philosophers *philo)
-{
-	long long current_time;
-	current_time = get_time() - philo->start_of_the_program;
-
-	pthread_mutex_lock(philo->left_fork);
-	pthread_mutex_lock(&philo->philo_info->message);
-	printf("%lld %d Has taken a left fork\n", current_time, philo->index);
-	pthread_mutex_unlock(&philo->philo_info->message);
-} */

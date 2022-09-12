@@ -6,7 +6,7 @@
 /*   By: lkavalia <lkavalia@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 18:15:14 by lkavalia          #+#    #+#             */
-/*   Updated: 2022/09/09 17:19:15 by lkavalia         ###   ########.fr       */
+/*   Updated: 2022/09/12 13:14:55 by lkavalia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,14 @@
 int death_checker(t_philosophers *philo)
 {
 	long long c_time;
-//	printf("get_time: %lld & last_time_ate %lld\n", get_time(), philo->last_time_ate);
-//	printf("%d first: %lld and t_death: %lld\n", philo->index, (get_time() - philo->last_time_ate), philo->t_death);
 	pthread_mutex_lock(&philo->philo_info->death);
 	if (philo->philo_info->death_counter > 0)
 	{
 		pthread_mutex_unlock(&philo->philo_info->death);
 		return (1);
 	}
-//	pthread_mutex_unlock(&philo->philo_info->death);
 	if ((get_time() - philo->last_time_ate) >= philo->t_death)
 	{
-		//		printf("get_time: %lld & last_time_ate %lld\n", get_time(), philo->last_time_ate);
-		//		printf("first: %lld and t_death: %lld\n", (get_time() - philo->last_time_ate), philo->t_death);
-	//	pthread_mutex_lock(&philo->philo_info->death);
 		if (philo->philo_info->death_counter > 0)
 		{
 			pthread_mutex_unlock(&philo->philo_info->death);
@@ -63,18 +57,23 @@ void eating(t_philosophers *philo)
 	future_time = get_time() + philo->t_eat;
 	while (get_time() <= future_time)
 	{
-		if (get_time() - philo->last_time_ate >= philo->t_death)
+		if (death_checker(philo) == 1)
 		{
 			pthread_mutex_unlock(philo->right_fork);
 			pthread_mutex_unlock(philo->left_fork);
 			return ;
 		}
+/* 		if (get_time() - philo->last_time_ate >= philo->t_death)
+		{
+			pthread_mutex_unlock(philo->right_fork);
+			pthread_mutex_unlock(philo->left_fork);
+			return ;
+		} */
 		usleep(200);
 	}
 	philo->last_time_ate = get_time();
 	pthread_mutex_unlock(philo->right_fork);
 	pthread_mutex_unlock(philo->left_fork);
-	//	printf("las_time_ate %lld\n", philo->last_time_ate);
 	philo->eaten_meals++;
 }
 
@@ -93,7 +92,6 @@ void	sleeping(t_philosophers *philo)
 	printf("%lld %d Philo is sleeping\n", c_time, philo->index);
 	pthread_mutex_unlock(&philo->philo_info->message);
 	future_time = get_time() + philo->t_sleep;
-//	pthread_mutex_lock(&philo->philo_info->message);
 	while (get_time() <= future_time)
 	{
 		if (get_time() - philo->last_time_ate >= philo->t_death)
@@ -102,7 +100,6 @@ void	sleeping(t_philosophers *philo)
 	}
 	if (death_checker(philo) == 1)
 		return ;
-//	pthread_mutex_unlock(&philo->philo_info->message);
 }
 
 void	thinking(t_philosophers *philo)
@@ -122,13 +119,10 @@ void	thinking(t_philosophers *philo)
 
 void *routine(t_philosophers *philo)
 {
-//	printf("Haloo\n");
-//	philo->start_of_the_thread = get_time(); // So i want to know when exactly starts to check by the end of the
-											 // routine if i should kill the philosopher or not
 	philo->start_of_the_thread = get_time();
 	philo->last_time_ate = philo->start_of_the_thread;
 	if (philo->index % 2 == 0)				// if number of philos is huge it prevents deadlock
-	{										// Deadlock appears because it takes long time to
+	{										// Deadlock appears because it takes 
 		if (philo->nbr_of_philo < 100)		//Create the threads
 			usleep(100);
 		else
@@ -146,12 +140,6 @@ void *routine(t_philosophers *philo)
 		sleeping(philo);
 		thinking(philo);
 	}
-	//	pthread_mutex_lock(&philo->philo_info->message);
-	//	c_time = get_time() - philo->start_of_the_program;
-	//	printf("%lld %d Philo is sleeping\n", c_time, philo->index);
-	//	pthread_mutex_unlock(&philo->philo_info->message);
-	// Sleeping
-//	sleeping(philo);
 	return (0);
 }
 
@@ -162,15 +150,12 @@ static int	create_philosophers(t_info info, t_philosophers *philo)
 	i = 0;
 	while (i < info.number_of_philo)
 	{
-//		int *a = malloc(sizeof(int)); //Not needed
-//		*a = i;							//Not needed
 		if (pthread_create(&philo[i].philosopher, NULL, (void *)routine, &philo[i]) != 0)
 		{
 			printf("Error(function: create_philosophers): pthread_create has failed! \n");
 			return (1);
 		}
 		i++;
-	//	free(a); //Not needed
 	}
 	return (0);
 }
@@ -187,7 +172,6 @@ static int	join_the_philosophers(t_info info, t_philosophers *philo)
 			printf("error\n");
 			return (2);
 		}
-//		printf("Finished the thread %d\n", i);
 		i++;
 	}
 	return (0);
@@ -202,8 +186,7 @@ int main(int argc, char *argv[])
 {
 	t_info info;
 	t_philosophers *philo;
-//	int i;
-//	long long time;
+	
 	//First stage to check all of the inputs
 	if (argc < 5 || argc > 6)
 		error_message("ERROR: Wrong amount of arguments!\n");
@@ -216,14 +199,7 @@ int main(int argc, char *argv[])
 	philo = malloc(sizeof(t_philosophers) * info.number_of_philo);	//malloced tthe philosophers
 	init_philosophers(&info, philo);								//Initializing philosophers
 //	printf("---------\n");											//Finished initializing stuff
-//	i = 0;
-//	time = get_time();
-//	printf("time: %lld & i: %d\n", time, i);	
-	//Second stage creating philosophers
 	create_philosophers(info, philo);								//Creating philosophers
-	
-	
-	
 	//Waiting for them to finish their stuff
 	join_the_philosophers(info, philo);							//Killing philosophers
 	if (destroy_mutexes(&info, philo) != 0)					//Throwing away the forks

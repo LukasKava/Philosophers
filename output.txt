@@ -1,10 +1,10 @@
-number of philos 200
-time to die 810
+number of philos 5
+time to die 800
 time to eat 200
 time to sleep 200
-number of meals 0
+number of meals 7
 death counter 0
-Start of the program 1662735708431
+Start of the program 1662980761690
 1 1 Has taken a right fork
 1 1 Has taken a left fork
 1 1 Philo is eating
@@ -12,862 +12,161 @@ Start of the program 1662735708431
 1 3 Has taken a left fork
 1 3 Philo is eating
 1 5 Has taken a right fork
-1 5 Has taken a left fork
-1 5 Philo is eating
-1 7 Has taken a right fork
-1 7 Has taken a left fork
-1 7 Philo is eating
-1 9 Has taken a right fork
-1 9 Has taken a left fork
-1 9 Philo is eating
-2 11 Has taken a right fork
-2 11 Has taken a left fork
-2 11 Philo is eating
-2 13 Has taken a right fork
-2 13 Has taken a left fork
-2 13 Philo is eating
-2 15 Has taken a right fork
-2 17 Has taken a right fork
-2 17 Has taken a left fork
-2 17 Philo is eating
-2 19 Has taken a right fork
-2 19 Has taken a left fork
-2 19 Philo is eating
-2 21 Has taken a right fork
-2 21 Has taken a left fork
-2 21 Philo is eating
-2 15 Has taken a left fork
-2 15 Philo is eating
-2 23 Has taken a right fork
-2 23 Has taken a left fork
-2 23 Philo is eating
-3 25 Has taken a right fork
-3 33 Has taken a right fork
-3 33 Has taken a left fork
-3 33 Philo is eating
-3 25 Has taken a left fork
-3 25 Philo is eating
-3 27 Has taken a right fork
-3 27 Has taken a left fork
-3 27 Philo is eating
-3 29 Has taken a right fork
-3 35 Has taken a right fork
-3 35 Has taken a left fork
-3 35 Philo is eating
-3 29 Has taken a left fork
-3 29 Philo is eating
-3 31 Has taken a right fork
-3 31 Has taken a left fork
-3 31 Philo is eating
-4 37 Has taken a right fork
-4 37 Has taken a left fork
-5 37 Philo is eating
-5 53 Has taken a right fork
-5 53 Has taken a left fork
-5 53 Philo is eating
-5 39 Has taken a right fork
-5 39 Has taken a left fork
-5 39 Philo is eating
-5 41 Has taken a right fork
-5 41 Has taken a left fork
-5 41 Philo is eating
-5 43 Has taken a right fork
-5 55 Has taken a right fork
-5 55 Has taken a left fork
-5 55 Philo is eating
-5 45 Has taken a right fork
-5 45 Has taken a left fork
-5 45 Philo is eating
-5 47 Has taken a right fork
-5 47 Has taken a left fork
-5 47 Philo is eating
-12 51 Has taken a right fork
-12 127 Has taken a right fork
-12 127 Has taken a left fork
-12 127 Philo is eating
-12 49 Has taken a right fork
-12 112 Has taken a right fork
-12 43 Has taken a left fork
-12 43 Philo is eating
-12 57 Has taken a right fork
-12 59 Has taken a right fork
-12 129 Has taken a right fork
-12 129 Has taken a left fork
-12 129 Philo is eating
-12 61 Has taken a right fork
-12 114 Has taken a right fork
-12 50 Has taken a right fork
-12 63 Has taken a right fork
-12 131 Has taken a right fork
-12 131 Has taken a left fork
-13 131 Philo is eating
-13 67 Has taken a right fork
-13 67 Has taken a left fork
-13 67 Philo is eating
-13 69 Has taken a right fork
-13 143 Has taken a right fork
-13 143 Has taken a left fork
-13 143 Philo is eating
-13 145 Has taken a right fork
-13 145 Has taken a left fork
-13 145 Philo is eating
-13 147 Has taken a right fork
-13 147 Has taken a left fork
-13 147 Philo is eating
-13 71 Has taken a right fork
-13 134 Has taken a right fork
-13 149 Has taken a right fork
-13 149 Has taken a left fork
-15 149 Philo is eating
-15 73 Has taken a right fork
-15 60 Has taken a right fork
-15 75 Has taken a right fork
-15 77 Has taken a right fork
-15 64 Has taken a right fork
-15 156 Has taken a right fork
-15 62 Has taken a right fork
-15 79 Has taken a right fork
-15 81 Has taken a right fork
-16 66 Has taken a right fork
-16 160 Has taken a right fork
-16 70 Has taken a right fork
-16 85 Has taken a right fork
-16 72 Has taken a right fork
-16 83 Has taken a right fork
-16 74 Has taken a right fork
-16 87 Has taken a right fork
-17 76 Has taken a right fork
-17 89 Has taken a right fork
-17 78 Has taken a right fork
-17 80 Has taken a right fork
-17 91 Has taken a right fork
-17 93 Has taken a right fork
-17 167 Has taken a right fork
-17 167 Has taken a left fork
-17 167 Philo is eating
-17 95 Has taken a right fork
-17 84 Has taken a right fork
-18 99 Has taken a right fork
-18 169 Has taken a right fork
-18 169 Has taken a left fork
-18 169 Philo is eating
-18 82 Has taken a right fork
-18 97 Has taken a right fork
-18 86 Has taken a right fork
-19 101 Has taken a right fork
-19 103 Has taken a right fork
-19 90 Has taken a right fork
-19 173 Has taken a right fork
-19 173 Has taken a left fork
-19 173 Philo is eating
-20 175 Has taken a right fork
-20 175 Has taken a left fork
-20 175 Philo is eating
-20 172 Has taken a right fork
-20 105 Has taken a right fork
-20 177 Has taken a right fork
-20 177 Has taken a left fork
-20 177 Philo is eating
-20 107 Has taken a right fork
-21 92 Has taken a right fork
-21 94 Has taken a right fork
-21 109 Has taken a right fork
-22 96 Has taken a right fork
-22 191 Has taken a right fork
-22 102 Has taken a right fork
-22 191 Has taken a left fork
-22 191 Philo is eating
-22 104 Has taken a right fork
-23 193 Has taken a right fork
-23 193 Has taken a left fork
-23 193 Philo is eating
-23 98 Has taken a right fork
-23 180 Has taken a right fork
-23 197 Has taken a right fork
-23 197 Has taken a left fork
-23 197 Philo is eating
-23 106 Has taken a right fork
-23 111 Has taken a right fork
-23 195 Has taken a right fork
-23 195 Has taken a left fork
-24 113 Has taken a right fork
-24 182 Has taken a right fork
-24 195 Philo is eating
-24 108 Has taken a right fork
-24 117 Has taken a right fork
-24 119 Has taken a right fork
-24 115 Has taken a right fork
-24 121 Has taken a right fork
-24 125 Has taken a right fork
-25 123 Has taken a right fork
-25 52 Has taken a right fork
-25 116 Has taken a right fork
-25 133 Has taken a right fork
-25 135 Has taken a right fork
-25 120 Has taken a right fork
-25 118 Has taken a right fork
-25 122 Has taken a right fork
-26 124 Has taken a right fork
-26 137 Has taken a right fork
-26 126 Has taken a right fork
-27 139 Has taken a right fork
-27 141 Has taken a right fork
-27 58 Has taken a right fork
-27 136 Has taken a right fork
-27 151 Has taken a right fork
-27 138 Has taken a right fork
-27 153 Has taken a right fork
-27 140 Has taken a right fork
-27 155 Has taken a right fork
-27 157 Has taken a right fork
-27 142 Has taken a right fork
-28 159 Has taken a right fork
-30 152 Has taken a right fork
-30 154 Has taken a right fork
-41 161 Has taken a right fork
-41 158 Has taken a right fork
-41 163 Has taken a right fork
-41 162 Has taken a right fork
-41 165 Has taken a right fork
-41 164 Has taken a right fork
-41 166 Has taken a right fork
-41 171 Has taken a right fork
-41 88 Has taken a right fork
-41 179 Has taken a right fork
-41 181 Has taken a right fork
-41 183 Has taken a right fork
-41 185 Has taken a right fork
-42 187 Has taken a right fork
-42 100 Has taken a right fork
-42 110 Has taken a right fork
-42 189 Has taken a right fork
-44 184 Has taken a right fork
-44 199 Has taken a right fork
-45 186 Has taken a right fork
-45 188 Has taken a right fork
-45 190 Has taken a right fork
-45 200 Has taken a right fork
-45 65 Has taken a right fork
-202 5 Philo is sleeping
-202 6 Has taken a right fork
 202 3 Philo is sleeping
 202 4 Has taken a right fork
-202 4 Has taken a left fork
-202 4 Philo is eating
-203 11 Philo is sleeping
-203 12 Has taken a right fork
-203 17 Philo is sleeping
-203 21 Philo is sleeping
-203 15 Philo is sleeping
-203 18 Has taken a right fork
-206 18 Has taken a left fork
-206 18 Philo is eating
-206 13 Philo is sleeping
-206 45 Philo is sleeping
-206 14 Has taken a right fork
-206 14 Has taken a left fork
-206 14 Philo is eating
-206 8 Has taken a right fork
-206 8 Has taken a left fork
-206 8 Philo is eating
-206 39 Philo is sleeping
-206 46 Has taken a right fork
-206 40 Has taken a right fork
-206 55 Philo is sleeping
-206 56 Has taken a right fork
-206 12 Has taken a left fork
-206 12 Philo is eating
-207 37 Philo is sleeping
-207 52 Has taken a left fork
-208 52 Philo is eating
-208 200 Has taken a left fork
-208 200 Philo is eating
-208 1 Philo is sleeping
-208 2 Has taken a right fork
-208 2 Has taken a left fork
-208 2 Philo is eating
-208 29 Philo is sleeping
-208 30 Has taken a right fork
-208 30 Has taken a left fork
-208 30 Philo is eating
-208 27 Philo is sleeping
-208 25 Philo is sleeping
-208 31 Philo is sleeping
-209 33 Philo is sleeping
-209 9 Philo is sleeping
-209 34 Has taken a right fork
-209 34 Has taken a left fork
-209 34 Philo is eating
-209 32 Has taken a right fork
-210 32 Has taken a left fork
-210 32 Philo is eating
-210 26 Has taken a right fork
-210 26 Has taken a left fork
-210 26 Philo is eating
-210 10 Has taken a right fork
-210 10 Has taken a left fork
-210 10 Philo is eating
-210 24 Has taken a right fork
-210 24 Has taken a left fork
-210 24 Philo is eating
-210 23 Philo is sleeping
-210 35 Philo is sleeping
-210 22 Has taken a right fork
-210 22 Has taken a left fork
-210 22 Philo is eating
-210 28 Has taken a right fork
-210 19 Philo is sleeping
-211 6 Has taken a left fork
-211 6 Philo is eating
-211 7 Philo is sleeping
-211 20 Has taken a right fork
-211 20 Has taken a left fork
-211 20 Philo is eating
-211 36 Has taken a right fork
-211 36 Has taken a left fork
-211 36 Philo is eating
-211 38 Has taken a right fork
-211 16 Has taken a right fork
-212 16 Has taken a left fork
-212 16 Philo is eating
-212 53 Philo is sleeping
-212 54 Has taken a right fork
-212 54 Has taken a left fork
-212 54 Philo is eating
-212 40 Has taken a left fork
-212 40 Philo is eating
-212 41 Philo is sleeping
-212 42 Has taken a right fork
-212 28 Has taken a left fork
-212 28 Philo is eating
-212 38 Has taken a left fork
-212 38 Philo is eating
-213 126 Has taken a left fork
-213 126 Philo is eating
-213 43 Philo is sleeping
-213 128 Has taken a right fork
-213 127 Philo is sleeping
-213 42 Has taken a left fork
-213 42 Philo is eating
-213 128 Has taken a left fork
-213 128 Philo is eating
-213 44 Has taken a right fork
-213 44 Has taken a left fork
-213 44 Philo is eating
-213 47 Philo is sleeping
-213 46 Has taken a left fork
-213 46 Philo is eating
-213 129 Philo is sleeping
-214 147 Philo is sleeping
-214 146 Has taken a right fork
-214 146 Has taken a left fork
-214 146 Philo is eating
-214 145 Philo is sleeping
-214 148 Has taken a right fork
-214 143 Philo is sleeping
-214 142 Has taken a left fork
-214 142 Philo is eating
-214 144 Has taken a right fork
-214 144 Has taken a left fork
-214 144 Philo is eating
-214 68 Has taken a right fork
-214 66 Has taken a left fork
-214 67 Philo is sleeping
-214 66 Philo is eating
-214 48 Has taken a right fork
-214 131 Philo is sleeping
-214 132 Has taken a right fork
-214 130 Has taken a right fork
-214 130 Has taken a left fork
-214 130 Philo is eating
-216 149 Philo is sleeping
-216 148 Has taken a left fork
-216 148 Philo is eating
-216 150 Has taken a right fork
-218 166 Has taken a left fork
-218 166 Philo is eating
-218 167 Philo is sleeping
-218 168 Has taken a right fork
-219 168 Has taken a left fork
-219 168 Philo is eating
-219 169 Philo is sleeping
-219 170 Has taken a right fork
-220 172 Has taken a left fork
-220 172 Philo is eating
-220 173 Philo is sleeping
-221 174 Has taken a right fork
-221 174 Has taken a left fork
-221 174 Philo is eating
-221 177 Philo is sleeping
-221 175 Philo is sleeping
-221 176 Has taken a right fork
-221 178 Has taken a right fork
-221 176 Has taken a left fork
-221 176 Philo is eating
-223 190 Has taken a left fork
-223 190 Philo is eating
-224 197 Philo is sleeping
-224 198 Has taken a right fork
-224 193 Philo is sleeping
-224 191 Philo is sleeping
-224 192 Has taken a right fork
-225 192 Has taken a left fork
-225 192 Philo is eating
-225 194 Has taken a right fork
-225 194 Has taken a left fork
-225 194 Philo is eating
-225 195 Philo is sleeping
-225 196 Has taken a right fork
-225 196 Has taken a left fork
-225 196 Philo is eating
-403 5 Philo is thinking
+202 1 Philo is sleeping
+202 5 Has taken a left fork
+202 5 Philo is eating
+202 2 Has taken a right fork
+202 2 Has taken a left fork
+202 2 Philo is eating
+403 1 Philo is thinking
 403 3 Philo is thinking
-404 4 Philo is sleeping
-404 5 Has taken a right fork
-404 21 Philo is thinking
-404 15 Philo is thinking
-404 17 Philo is thinking
-404 11 Philo is thinking
-407 18 Philo is sleeping
-407 13 Philo is thinking
-407 14 Philo is sleeping
-408 12 Philo is sleeping
-409 13 Has taken a right fork
-409 29 Philo is thinking
-409 13 Has taken a left fork
-409 13 Philo is eating
-409 31 Philo is thinking
-409 27 Philo is thinking
-409 1 Philo is thinking
-409 199 Has taken a left fork
-409 199 Philo is eating
-409 200 Philo is sleeping
-409 2 Philo is sleeping
-409 1 Has taken a right fork
-409 1 Has taken a left fork
-409 1 Philo is eating
-409 45 Philo is thinking
-409 39 Philo is thinking
-409 25 Philo is thinking
-409 55 Philo is thinking
-409 15 Has taken a right fork
-410 52 Philo is sleeping
-411 37 Philo is thinking
-411 30 Philo is sleeping
-411 51 Has taken a left fork
-411 51 Philo is eating
-411 33 Philo is thinking
-411 33 Has taken a right fork
-411 33 Has taken a left fork
-411 33 Philo is eating
-411 32 Philo is sleeping
-411 8 Philo is sleeping
-411 9 Philo is thinking
-411 3 Has taken a right fork
-411 3 Has taken a left fork
-411 3 Philo is eating
-411 31 Has taken a right fork
-411 31 Has taken a left fork
-411 31 Philo is eating
-411 9 Has taken a right fork
-411 9 Has taken a left fork
-411 9 Philo is eating
-411 34 Philo is sleeping
-411 24 Philo is sleeping
-412 25 Has taken a right fork
-412 36 Philo is sleeping
-412 6 Philo is sleeping
-412 23 Philo is thinking
-412 23 Has taken a right fork
-412 23 Has taken a left fork
-412 23 Philo is eating
-412 22 Philo is sleeping
-412 19 Philo is thinking
-412 19 Has taken a right fork
-412 37 Has taken a right fork
-412 5 Has taken a left fork
-412 5 Philo is eating
-412 27 Has taken a right fork
-412 35 Philo is thinking
-412 35 Has taken a right fork
-412 11 Has taken a right fork
-412 11 Has taken a left fork
-412 11 Philo is eating
-412 25 Has taken a left fork
-413 20 Philo is sleeping
-413 19 Has taken a left fork
-413 54 Philo is sleeping
-413 55 Has taken a right fork
-413 10 Philo is sleeping
-413 35 Has taken a left fork
-413 35 Philo is eating
-413 19 Philo is eating
-413 26 Philo is sleeping
-413 25 Philo is eating
-413 7 Philo is thinking
-413 7 Has taken a right fork
-413 7 Has taken a left fork
-413 7 Philo is eating
-413 38 Philo is sleeping
-413 41 Philo is thinking
-413 41 Has taken a right fork
-413 28 Philo is sleeping
-413 29 Has taken a right fork
-413 15 Has taken a left fork
-413 15 Philo is eating
-413 29 Has taken a left fork
-413 29 Philo is eating
-413 40 Philo is sleeping
-413 17 Has taken a right fork
-413 17 Has taken a left fork
-413 17 Philo is eating
-413 37 Has taken a left fork
-413 37 Philo is eating
-413 39 Has taken a right fork
-413 53 Philo is thinking
-413 21 Has taken a right fork
-413 21 Has taken a left fork
-413 21 Philo is eating
-415 142 Philo is sleeping
-415 39 Has taken a left fork
-415 130 Philo is sleeping
-415 16 Philo is sleeping
-415 146 Philo is sleeping
-415 141 Has taken a left fork
-415 39 Philo is eating
-415 53 Has taken a right fork
-415 44 Philo is sleeping
-415 43 Philo is thinking
-415 42 Philo is sleeping
-415 43 Has taken a right fork
-415 53 Has taken a left fork
-415 53 Philo is eating
-415 143 Philo is thinking
-415 143 Has taken a right fork
-415 143 Has taken a left fork
-415 143 Philo is eating
-415 43 Has taken a left fork
-415 125 Has taken a left fork
-415 125 Philo is eating
-415 43 Philo is eating
-416 46 Philo is sleeping
-416 127 Philo is thinking
-416 127 Has taken a right fork
-416 127 Has taken a left fork
-416 127 Philo is eating
-416 41 Has taken a left fork
-416 41 Philo is eating
-416 144 Philo is sleeping
-416 131 Philo is thinking
-416 131 Has taken a right fork
-416 145 Philo is thinking
-416 145 Has taken a right fork
-416 145 Has taken a left fork
-416 145 Philo is eating
-415 141 Philo is eating
-416 45 Has taken a right fork
-418 128 Philo is sleeping
-418 126 Philo is sleeping
-418 45 Has taken a left fork
-418 45 Philo is eating
-418 47 Philo is thinking
-418 47 Has taken a right fork
-418 66 Philo is sleeping
-419 129 Philo is thinking
-419 167 Philo is thinking
-419 129 Has taken a right fork
-419 129 Has taken a left fork
-419 129 Philo is eating
-419 67 Philo is thinking
-419 166 Philo is sleeping
-419 165 Has taken a left fork
-419 165 Philo is eating
-419 67 Has taken a right fork
-419 147 Philo is thinking
-419 147 Has taken a right fork
-420 147 Has taken a left fork
-420 147 Philo is eating
-420 27 Has taken a left fork
-420 27 Philo is eating
-420 149 Philo is thinking
-420 149 Has taken a right fork
-420 148 Philo is sleeping
-420 65 Has taken a left fork
-420 65 Philo is eating
-420 168 Philo is sleeping
-420 167 Has taken a right fork
-420 167 Has taken a left fork
-420 167 Philo is eating
-420 169 Philo is thinking
-420 169 Has taken a right fork
-421 173 Philo is thinking
-421 171 Has taken a left fork
-421 171 Philo is eating
-421 172 Philo is sleeping
-422 177 Philo is thinking
-422 177 Has taken a right fork
-422 173 Has taken a right fork
-422 176 Philo is sleeping
-422 173 Has taken a left fork
-422 173 Philo is eating
-422 175 Philo is thinking
-422 175 Has taken a right fork
-422 175 Has taken a left fork
-422 175 Philo is eating
-422 174 Philo is sleeping
-424 190 Philo is sleeping
-424 189 Has taken a left fork
-424 189 Philo is eating
-425 193 Philo is thinking
-425 197 Philo is thinking
-425 191 Philo is thinking
-425 191 Has taken a right fork
-426 195 Philo is thinking
-426 192 Philo is sleeping
-426 193 Has taken a right fork
-426 193 Has taken a left fork
-426 193 Philo is eating
-426 191 Has taken a left fork
-426 194 Philo is sleeping
-426 191 Philo is eating
-426 195 Has taken a right fork
-426 195 Has taken a left fork
-426 195 Philo is eating
-426 196 Philo is sleeping
-426 197 Has taken a right fork
-605 4 Philo is thinking
-608 18 Philo is thinking
-609 14 Philo is thinking
-609 12 Philo is thinking
-610 199 Philo is sleeping
-610 200 Philo is thinking
-610 200 Has taken a right fork
-611 200 Has taken a left fork
-611 200 Philo is eating
-611 52 Philo is thinking
-611 198 Has taken a left fork
-611 198 Philo is eating
-611 14 Has taken a right fork
-611 2 Philo is thinking
-611 2 Has taken a right fork
-611 1 Philo is sleeping
-611 13 Philo is sleeping
-612 31 Philo is sleeping
-612 51 Philo is sleeping
-612 50 Has taken a left fork
-612 50 Philo is eating
-612 32 Philo is thinking
-612 32 Has taken a right fork
-612 9 Philo is sleeping
-612 24 Philo is thinking
-612 52 Has taken a right fork
-612 4 Has taken a right fork
-612 30 Philo is thinking
-612 33 Philo is sleeping
-613 36 Philo is thinking
-613 32 Has taken a left fork
-613 5 Philo is sleeping
-613 34 Philo is thinking
-613 11 Philo is sleeping
-613 32 Philo is eating
-613 34 Has taken a right fork
-613 12 Has taken a right fork
-613 12 Has taken a left fork
-613 12 Philo is eating
-613 2 Has taken a left fork
-613 24 Has taken a right fork
-613 6 Philo is thinking
-613 6 Has taken a right fork
-613 2 Philo is eating
-613 4 Has taken a left fork
-613 4 Philo is eating
-613 8 Philo is thinking
-613 3 Philo is sleeping
-613 23 Philo is sleeping
-613 22 Philo is thinking
-614 40 Philo is thinking
-614 54 Philo is thinking
-614 10 Philo is thinking
-614 10 Has taken a right fork
-614 10 Has taken a left fork
-614 10 Philo is eating
-614 20 Philo is thinking
-614 35 Philo is sleeping
-614 37 Philo is sleeping
-614 34 Has taken a left fork
-614 34 Philo is eating
-614 36 Has taken a right fork
-614 36 Has taken a left fork
-614 36 Philo is eating
-614 29 Philo is sleeping
-614 15 Philo is sleeping
-614 14 Has taken a left fork
-614 14 Philo is eating
-615 26 Philo is thinking
-615 26 Has taken a right fork
-615 30 Has taken a right fork
-615 7 Philo is sleeping
-615 28 Philo is thinking
-615 30 Has taken a left fork
-615 30 Philo is eating
-615 8 Has taken a right fork
-615 8 Has taken a left fork
-615 8 Philo is eating
-615 6 Has taken a left fork
-615 6 Philo is eating
-615 19 Philo is sleeping
-615 17 Philo is sleeping
-615 20 Has taken a right fork
-615 18 Has taken a right fork
-615 18 Has taken a left fork
-616 18 Philo is eating
-616 124 Has taken a left fork
-616 124 Philo is eating
-616 24 Has taken a left fork
-616 125 Philo is sleeping
-616 24 Philo is eating
-616 38 Philo is thinking
-616 38 Has taken a right fork
-616 38 Has taken a left fork
-616 38 Philo is eating
-616 25 Philo is sleeping
-616 42 Philo is thinking
-616 39 Philo is sleeping
-616 43 Philo is sleeping
-616 143 Philo is sleeping
-616 53 Philo is sleeping
-616 16 Philo is thinking
-616 16 Has taken a right fork
-616 16 Has taken a left fork
-617 16 Philo is eating
-617 52 Has taken a left fork
-617 52 Philo is eating
-617 40 Has taken a right fork
-617 40 Has taken a left fork
-617 40 Philo is eating
-618 146 Philo is thinking
-618 146 Has taken a right fork
-618 142 Philo is thinking
-618 142 Has taken a right fork
-618 142 Has taken a left fork
-618 142 Philo is eating
-618 21 Philo is sleeping
-618 22 Has taken a right fork
-618 22 Has taken a left fork
-618 22 Philo is eating
-618 130 Philo is thinking
-618 20 Has taken a left fork
-618 20 Philo is eating
-619 54 Has taken a right fork
-619 46 Philo is thinking
-619 46 Has taken a right fork
-619 66 Philo is thinking
-619 145 Philo is sleeping
-619 141 Philo is sleeping
-619 127 Philo is sleeping
-619 140 Has taken a left fork
-619 140 Philo is eating
-619 144 Philo is thinking
-619 144 Has taken a right fork
-619 144 Has taken a left fork
-619 144 Philo is eating
-619 41 Philo is sleeping
-619 42 Has taken a right fork
-619 42 Has taken a left fork
-619 42 Philo is eating
-619 44 Philo is thinking
-619 44 Has taken a right fork
-620 44 Has taken a left fork
-620 44 Philo is eating
-620 128 Philo is thinking
-620 128 Has taken a right fork
-620 165 Philo is sleeping
-620 45 Philo is sleeping
-620 129 Philo is sleeping
-620 130 Has taken a right fork
-620 128 Has taken a left fork
-620 128 Philo is eating
-620 164 Has taken a left fork
-620 164 Philo is eating
-620 126 Philo is thinking
-620 126 Has taken a right fork
-620 126 Has taken a left fork
-620 126 Philo is eating
-620 166 Philo is thinking
-620 166 Has taken a right fork
-621 26 Has taken a left fork
-621 147 Philo is sleeping
-621 146 Has taken a left fork
-621 146 Philo is eating
-621 27 Philo is sleeping
-621 148 Philo is thinking
-621 148 Has taken a right fork
-621 65 Philo is sleeping
-621 26 Philo is eating
-621 167 Philo is sleeping
-621 166 Has taken a left fork
-621 166 Philo is eating
-621 168 Philo is thinking
-622 168 Has taken a right fork
-622 64 Has taken a left fork
-622 64 Philo is eating
-622 28 Has taken a right fork
-622 28 Has taken a left fork
-622 28 Philo is eating
-622 66 Has taken a right fork
-623 170 Has taken a left fork
-623 170 Philo is eating
-623 171 Philo is sleeping
-623 176 Philo is thinking
-623 176 Has taken a right fork
-623 175 Philo is sleeping
-623 173 Philo is sleeping
-623 174 Philo is thinking
-623 174 Has taken a right fork
-623 174 Has taken a left fork
-623 174 Philo is eating
-623 172 Philo is thinking
-623 172 Has taken a right fork
-623 172 Has taken a left fork
-623 172 Philo is eating
-625 188 Has taken a left fork
-625 188 Philo is eating
-625 189 Philo is sleeping
-625 190 Philo is thinking
-625 190 Has taken a right fork
-627 194 Philo is thinking
-627 191 Philo is sleeping
-627 190 Has taken a left fork
-627 190 Philo is eating
-627 193 Philo is sleeping
-627 195 Philo is sleeping
-627 196 Philo is thinking
-627 196 Has taken a right fork
-627 194 Has taken a right fork
-627 194 Has taken a left fork
-627 194 Philo is eating
-627 192 Philo is thinking
-627 192 Has taken a right fork
-627 192 Has taken a left fork
-627 192 Philo is eating
-811 199 Philo is thinking
-812 13 Philo is thinking
-812 1 Philo is thinking
-813 200 Philo is sleeping
-813 198 Philo is sleeping
-813 1 Has taken a right fork
-813 31 Philo is thinking
-813 197 Has taken a left fork
-813 197 Philo is eating
-813 50 Philo is sleeping
-813 199 Has taken a right fork
-813 199 Has taken a left fork
-813 199 Philo is eating
-813 51 Philo is thinking
-813 51 Has taken a right fork
-813 49 Has taken a left fork
-813 49 Philo is eating
-813 9 Philo is thinking
-814 33 Philo is thinking
-814 12 Philo is sleeping
-814 49 [0;31m Philo is dead
+403 5 Philo is sleeping
+403 4 Has taken a left fork
+403 4 Philo is eating
+403 1 Has taken a right fork
+404 2 Philo is sleeping
+404 1 Has taken a left fork
+404 1 Philo is eating
+404 3 Has taken a right fork
+604 4 Philo is sleeping
+604 3 Has taken a left fork
+604 3 Philo is eating
+604 5 Philo is thinking
+604 5 Has taken a right fork
+605 2 Philo is thinking
+605 5 Has taken a left fork
+605 5 Philo is eating
+605 1 Philo is sleeping
+605 2 Has taken a right fork
+805 4 Philo is thinking
+805 3 Philo is sleeping
+805 4 Has taken a right fork
+805 2 Has taken a left fork
+805 2 Philo is eating
+806 5 Philo is sleeping
+806 4 Has taken a left fork
+806 4 Philo is eating
+806 1 Philo is thinking
+806 1 Has taken a right fork
+1006 3 Philo is thinking
+1006 2 Philo is sleeping
+1006 3 Has taken a right fork
+1006 1 Has taken a left fork
+1006 1 Philo is eating
+1007 5 Philo is thinking
+1007 4 Philo is sleeping
+1007 3 Has taken a left fork
+1007 3 Philo is eating
+1007 5 Has taken a right fork
+1207 2 Philo is thinking
+1207 5 Has taken a left fork
+1207 5 Philo is eating
+1207 1 Philo is sleeping
+1207 2 Has taken a right fork
+1208 3 Philo is sleeping
+1208 2 Has taken a left fork
+1208 2 Philo is eating
+1208 4 Philo is thinking
+1208 4 Has taken a right fork
+1408 1 Philo is thinking
+1408 4 Has taken a left fork
+1408 4 Philo is eating
+1408 5 Philo is sleeping
+1408 1 Has taken a right fork
+1409 3 Philo is thinking
+1409 1 Has taken a left fork
+1409 1 Philo is eating
+1409 2 Philo is sleeping
+1409 3 Has taken a right fork
+1609 5 Philo is thinking
+1609 3 Has taken a left fork
+1609 3 Philo is eating
+1609 4 Philo is sleeping
+1609 5 Has taken a right fork
+1610 2 Philo is thinking
+1610 5 Has taken a left fork
+1610 5 Philo is eating
+1610 1 Philo is sleeping
+1610 2 Has taken a right fork
+1810 4 Philo is thinking
+1810 3 Philo is sleeping
+1810 4 Has taken a right fork
+1810 2 Has taken a left fork
+1810 2 Philo is eating
+1811 1 Philo is thinking
+1811 4 Has taken a left fork
+1811 4 Philo is eating
+1811 5 Philo is sleeping
+1811 1 Has taken a right fork
+2011 3 Philo is thinking
+2011 2 Philo is sleeping
+2011 3 Has taken a right fork
+2011 1 Has taken a left fork
+2011 1 Philo is eating
+2012 5 Philo is thinking
+2012 3 Has taken a left fork
+2012 3 Philo is eating
+2012 4 Philo is sleeping
+2012 5 Has taken a right fork
+2212 2 Philo is thinking
+2212 1 Philo is sleeping
+2212 2 Has taken a right fork
+2212 5 Has taken a left fork
+2212 5 Philo is eating
+2213 3 Philo is sleeping
+2213 4 Philo is thinking
+2213 4 Has taken a right fork
+2213 2 Has taken a left fork
+2213 2 Philo is eating
+2413 1 Philo is thinking
+2413 4 Has taken a left fork
+2413 4 Philo is eating
+2413 5 Philo is sleeping
+2413 1 Has taken a right fork
+2414 3 Philo is thinking
+2414 2 Philo is sleeping
+2414 3 Has taken a right fork
+2414 1 Has taken a left fork
+2414 1 Philo is eating
+2614 5 Philo is thinking
+2614 3 Has taken a left fork
+2614 3 Philo is eating
+2614 4 Philo is sleeping
+2614 5 Has taken a right fork
+2615 1 Philo is sleeping
+2615 5 Has taken a left fork
+2615 2 Philo is thinking
+2615 2 Has taken a right fork
+2615 5 Philo is eating
+2815 4 Philo is thinking
+2815 4 Has taken a right fork
+2815 3 Philo is sleeping
+2815 2 Has taken a left fork
+2815 2 Philo is eating
+2816 1 Philo is thinking
+2816 4 Has taken a left fork
+2816 4 Philo is eating
+2816 5 Philo is sleeping
+2816 1 Has taken a right fork
+3016 3 Philo is thinking
+3016 1 Has taken a left fork
+3016 1 Philo is eating
+3016 2 Philo is sleeping
+3016 3 Has taken a right fork
+3017 5 Philo is thinking
+3017 3 Has taken a left fork
+3017 3 Philo is eating
+3017 4 Philo is sleeping
+3017 5 Has taken a right fork
+3217 2 Philo is thinking
+3217 5 Has taken a left fork
+3217 5 Philo is eating
+3217 2 Has taken a right fork
+3218 4 Philo is thinking
+3218 2 Has taken a left fork
+3218 2 Philo is eating
+3218 4 Has taken a right fork
+3418 4 Has taken a left fork
+3418 4 Philo is eating
