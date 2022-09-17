@@ -6,9 +6,12 @@
 /*   By: lkavalia <lkavalia@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 18:23:37 by lkavalia          #+#    #+#             */
-/*   Updated: 2022/09/09 16:47:05 by lkavalia         ###   ########.fr       */
+/*   Updated: 2022/09/14 13:08:14 by lkavalia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef PHILOSOPHERS_H
+# 
 
 #include <stdio.h>
 #include <unistd.h>
@@ -21,7 +24,7 @@ typedef struct s_info
 	int				number_of_philo;
 	long long		time_to_die;		//miliseconds
 	long long		time_to_eat;		//miliseconds
-	long long		time_to_sleep;	//miliseconds
+	long long		time_to_sleep;		//miliseconds
 	long long		start;
 	pthread_mutex_t	*forks;
 	pthread_mutex_t message;
@@ -48,23 +51,22 @@ typedef struct s_philosophers
 	
 } t_philosophers;
 
-int death_checker(t_philosophers *philo);
 
-/* void		taking_right_fork(t_philosophers *philo);
-void		taking_left_fork(t_philosophers	*philo); */
-void taking_forks(t_philosophers *philo);
+/*---- Functions from routine_functions.c --------------------*/
+int			death_checker(t_philosophers *philo);
+void		taking_forks(t_philosophers *philo);
+void		eating(t_philosophers *philo);
+void		thinking(t_philosophers *philo);
+void		sleeping(t_philosophers *philo);
 
 /*---- Functions from init.c ---------------------------------*/
 void		passing_arguments(int argc, char **argv, t_info *info);
 void		init_philosophers(t_info *info, t_philosophers *philosophers);
 int			init_mutexes(t_info *info);
-int			destroy_mutexes(t_info *info, t_philosophers *philo);
+int			destroy_mutexes(t_info *info);
 
 /*---- Functions from utils.c --------------------------------*/
-size_t ft_strlen(const char *c);
+size_t		ft_strlen(const char *c);
 void		error_message(char *message);
 int			ft_atoi(const char *str);
 long long	get_time();
-
-/*---- Functions from test_function.c ------------------------*/
-void		printf_everything(t_info info);

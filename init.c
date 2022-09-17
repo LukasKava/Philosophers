@@ -6,13 +6,20 @@
 /*   By: lkavalia <lkavalia@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 20:19:25 by lkavalia          #+#    #+#             */
-/*   Updated: 2022/09/12 12:22:57 by lkavalia         ###   ########.fr       */
+/*   Updated: 2022/09/12 17:49:50 by lkavalia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philosophers.h"
 
-void passing_arguments(int argc, char **argv, t_info *info)
+/**
+ * FUNCTION: (passing_arguments) it takes care of passing the information
+ * 			to the main stuct called info. It works by:
+ * 1. Converting certain line command arguments from strings to numbers.
+ * 2. It assings it to the certain place in the info stuct.
+ * 			also it initializes also other information used in the simulation.
+ */
+void	passing_arguments(int argc, char **argv, t_info *info)
 {
 	info->number_of_philo = ft_atoi(argv[1]);
 	if (info->number_of_philo < 2)
@@ -29,10 +36,14 @@ void passing_arguments(int argc, char **argv, t_info *info)
 	info->start = get_time();
 }
 
+/**
+ * FUNCTION: (init_philosophers) takes care of initializing the certain
+ * 			information for each philosopher.
+ */
 void	init_philosophers(t_info *info, t_philosophers *philo)
 {
-	int	i;
-	
+	int i;
+
 	i = 0;
 	while (i < info->number_of_philo)
 	{
@@ -51,9 +62,19 @@ void	init_philosophers(t_info *info, t_philosophers *philo)
 	}
 }
 
-int init_mutexes(t_info *info)
+/**
+ * FUNCTION: (init_mutexes) takes care of creating the mutexes by following
+ * 			simple steps:
+ * 1. It mallocs the needed amount of forks and checks if it was succesfull.
+ * 2. Using a while loop it uses a pthread_mutex_init to initialize each fork.
+ * 3. Initializes the other needed mutexes like message and death.
+ * RETURN_VALUE:
+ * --------- 0 In case everything went well.
+ * --------- 1 In case malloc or pthread_mutex_init fails.
+ */
+int	init_mutexes(t_info *info)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	info->forks = malloc(sizeof(pthread_mutex_t) * info->number_of_philo);
@@ -62,7 +83,7 @@ int init_mutexes(t_info *info)
 		printf("Error(function init_mutexes): there was a failure while mallocing forks!\n");
 		return (1);
 	}
-	while(i < info->number_of_philo)
+	while (i < info->number_of_philo)
 	{
 		if (pthread_mutex_init(&info->forks[i], NULL) != 0)
 		{
@@ -76,10 +97,18 @@ int init_mutexes(t_info *info)
 	return (0);
 }
 
-int	destroy_mutexes(t_info *info, t_philosophers *philo)
+/**
+ * FUNCTION: (destroy_mutexes) This function takes care of getting rid
+ * 			of the mutexes using the function pthread_mutex_destroy.
+ * 			It destroys each for message mutex and the death mutex.
+ * RETURN_VALUES:
+ * -------- 0 In case everything went succesfully.
+ * --------	1 In case anything went wrong with the pthread_mutex_destroy.
+ */
+int destroy_mutexes(t_info *info)
 {
 	int i;
-	
+
 	i = 0;
 	while (i < info->number_of_philo)
 	{
@@ -90,9 +119,13 @@ int	destroy_mutexes(t_info *info, t_philosophers *philo)
 		}
 		i++;
 	}
-	pthread_mutex_destroy(philo->right_fork);
-	pthread_mutex_destroy(philo->left_fork);
-	pthread_mutex_destroy(&info->message);
-	pthread_mutex_destroy(&info->death);
+	//	if (pthread_mutex_destroy(philo->right_fork) != 0)
+	//		printf("errrorrr\n");
+	//	if (pthread_mutex_destroy(philo->left_fork) != 0)
+	//		printf("error line 96 left fork!\n");
+	if (pthread_mutex_destroy(&info->message) != 0)
+		printf("error message!\n");
+	if (pthread_mutex_destroy(&info->death) != 0)
+		printf("error death");
 	return (0);
 }

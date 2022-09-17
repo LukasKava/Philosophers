@@ -6,7 +6,7 @@
 #    By: lkavalia <lkavalia@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/24 18:43:55 by lkavalia          #+#    #+#              #
-#    Updated: 2022/09/07 10:12:28 by lkavalia         ###   ########.fr        #
+#    Updated: 2022/09/13 10:22:47 by lkavalia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,6 @@ NAME	= philo
 SRCS	= 	main.c \
 			init.c \
 			routine_functions.c \
-			test_function.c \
 			utils.c
 
 OBJS = $(SRCS:.c=.o)
@@ -30,6 +29,9 @@ $(NAME): $(SRCS)
 		$(CC) $(CFLAGS) $(SRCS) -lpthread -o $(NAME)
 		@echo "Making the files"
 
+checking:
+		$(CC) $(CFLAGS) $(SRCS) -lpthread -fsanitize=thread -o check
+		
 all: $(NAME)
 
 clean:

@@ -6,7 +6,7 @@
 /*   By: lkavalia <lkavalia@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 01:34:06 by lkavalia          #+#    #+#             */
-/*   Updated: 2022/09/05 18:07:07 by lkavalia         ###   ########.fr       */
+/*   Updated: 2022/09/12 17:48:48 by lkavalia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ long long get_time()
 		printf("ERROR(get_time() in utils.c): gettimeofday has failed!\n");
 		return (1);
 	}
-//	printf("time_stmp %li\n", time_stmp.tv_usec / 1000 + time_stmp.tv_sec * 1000);
 	return ((time_stmp.tv_usec / 1000) + (time_stmp.tv_sec * 1000));
 }
 
