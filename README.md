@@ -22,6 +22,7 @@ Example #
 Neither program can proceed until the other program releases a resource. The operating system cannot know what to do. The only option is to abort (stop) one of the programs.
 
 History-
+---------
 
 The earliest computer systems used to run only one program at the time. Due
 to this all of the recources of the sytem were available to this one specific
@@ -30,5 +31,6 @@ programs were required to specify recources they need so they could avoid confli
 reservation of recources after they started running. This led to an issue called
 deadlock.
 Learning to deal with deadlocks had a major impact on the development of operating systems and the structure of databases. Data was structured and the order of requests was constrained in order to avoid creating deadlocks.
+
 --------------------------------------------------------------------------------
 
