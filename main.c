@@ -3,119 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkavalia <lkavalia@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: lkavalia <lkavalia@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 18:15:14 by lkavalia          #+#    #+#             */
-/*   Updated: 2022/09/13 10:35:53 by lkavalia         ###   ########.fr       */
+/*   Updated: 2023/06/10 12:18:36 by lkavalia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philosophers.h"
-
-/* int death_checker(t_philosophers *philo)
-{
-	long long c_time;
-	pthread_mutex_lock(&philo->philo_info->death);
-	if (philo->philo_info->death_counter > 0)
-	{
-		pthread_mutex_unlock(&philo->philo_info->death);
-		return (1);
-	}
-	if ((get_time() - philo->last_time_ate) >= philo->t_death)
-	{
-		if (philo->philo_info->death_counter > 0)
-		{
-			pthread_mutex_unlock(&philo->philo_info->death);
-			return (1);
-		}
-		pthread_mutex_lock(&philo->philo_info->message);
-		c_time = get_time() - philo->start_of_the_program;
-		printf("%lld %d \033[0;31m Philo is dead\n", c_time, philo->index);
-		pthread_mutex_unlock(&philo->philo_info->message);
-		philo->philo_info->death_counter++;
-		pthread_mutex_unlock(&philo->philo_info->death);
-		return (1);
-	}
-	pthread_mutex_unlock(&philo->philo_info->death);
-	return (0);
-} */
-
-/* void eating(t_philosophers *philo)
-{
-	long long	future_time;
-	long long	c_time;
-
-	c_time = get_time() - philo->start_of_the_program;
-	pthread_mutex_lock(&philo->philo_info->message);
-	if (death_checker(philo) == 1)
-	{
-		pthread_mutex_unlock(&philo->philo_info->message);
-		return;
-	}
-	printf("%lld %d Philo is eating\n", c_time, philo->index);
-	pthread_mutex_unlock(&philo->philo_info->message);
-	future_time = get_time() + philo->t_eat;
-	while (get_time() <= future_time)
-	{
-		if (death_checker(philo) == 1)
-		{
-			pthread_mutex_unlock(philo->right_fork);
-			pthread_mutex_unlock(philo->left_fork);
-			return ;
-		}
-		if (get_time() - philo->last_time_ate >= philo->t_death)
-		{
-			pthread_mutex_unlock(philo->right_fork);
-			pthread_mutex_unlock(philo->left_fork);
-			return ;
-		}
-		usleep(200);
-	}
-	philo->last_time_ate = get_time();
-	pthread_mutex_unlock(philo->right_fork);
-	pthread_mutex_unlock(philo->left_fork);
-	philo->eaten_meals++;
-} */
-
-/* void	sleeping(t_philosophers *philo)
-{
-	long long	c_time;
-	long long	future_time;
-
-	pthread_mutex_lock(&philo->philo_info->message);
-	c_time = get_time() - philo->start_of_the_program;
-	if (death_checker(philo) == 1)
-	{
-		pthread_mutex_unlock(&philo->philo_info->message);
-		return;
-	}
-	printf("%lld %d Philo is sleeping\n", c_time, philo->index);
-	pthread_mutex_unlock(&philo->philo_info->message);
-	future_time = get_time() + philo->t_sleep;
-	while (get_time() <= future_time)
-	{
-		if (get_time() - philo->last_time_ate >= philo->t_death)
-			break ;
-		usleep(200);
-	}
-	if (death_checker(philo) == 1)
-		return ;
-} */
-
-/* void	thinking(t_philosophers *philo)
-{
-	long long c_time;
-	
-	pthread_mutex_lock(&philo->philo_info->message);
-	if (death_checker(philo) == 1)
-	{
-		pthread_mutex_unlock(&philo->philo_info->message);
-		return;
-	}
-	c_time = get_time() - philo->start_of_the_program;
-	printf("%lld %d Philo is thinking\n", c_time, philo->index);
-	pthread_mutex_unlock(&philo->philo_info->message);
-} */
 
 /**
  * FUNCTION: (routine) functions like a job plan  it takes care that each thread
@@ -147,7 +42,6 @@ void	*routine(t_philosophers *philo)
 	while (1)
 	{
 		taking_forks(philo);
-		// Eating
 		eating(philo);
 		if (death_checker(philo) == 1)
 			break ;
@@ -235,11 +129,10 @@ int	main(int argc, char *argv[])
 		return (1);
 	philo = malloc(sizeof(t_philosophers) * info.number_of_philo);	//malloced tthe philosophers
 	init_philosophers(&info, philo);								//Initializing philosophers
-//	printf("---------\n");											//Finished initializing stuff
 	create_philosophers(info, philo);								//Creating philosophers
 	//Waiting for them to finish their stuff
-	join_the_philosophers(info, philo);							//Killing philosophers
-	if (destroy_mutexes(&info) != 0)					//Throwing away the forks
+	join_the_philosophers(info, philo);								//Killing philosophers
+	if (destroy_mutexes(&info) != 0)								//Throwing away the forks
 		return (1);
 	free(philo);
 	free(info.forks);

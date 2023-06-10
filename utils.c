@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkavalia <lkavalia@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: lkavalia <lkavalia@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 01:34:06 by lkavalia          #+#    #+#             */
-/*   Updated: 2022/09/12 17:48:48 by lkavalia         ###   ########.fr       */
+/*   Updated: 2023/06/10 12:22:06 by lkavalia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philosophers.h"
 
-size_t ft_strlen(const char *c)
+size_t	ft_strlen(const char *c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (c[i] != '\0')
@@ -22,9 +22,9 @@ size_t ft_strlen(const char *c)
 	return (i);
 }
 
-void error_message(char *message)
+void	error_message(char *message)
 {
-	int i;
+	int	i;
 
 	i = ft_strlen(message) + 1;
 	write(1, message, i);
@@ -34,14 +34,15 @@ void error_message(char *message)
 /*
 This function converts the string to an integer
 */
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int i;
-	int b;
+	int	i;
+	int	b;
 
 	i = 0;
 	b = 0;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\r' || str[i] == '\n' || str[i] == '\v' || str[i] == '\f')
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\r' || \
+			str[i] == '\n' || str[i] == '\v' || str[i] == '\f')
 		i++;
 	if (str[i] == '-' && str[i] != '\0')
 		error_message("ERROR: No negative numbers!\n");
@@ -57,9 +58,10 @@ int ft_atoi(const char *str)
 	return (b);
 }
 
-long long get_time()
+long long	get_time(void)
 {
-	struct timeval time_stmp;
+	struct timeval	time_stmp;
+
 	if (gettimeofday(&time_stmp, NULL) < 0)
 	{
 		printf("ERROR(get_time() in utils.c): gettimeofday has failed!\n");

@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   philosophers.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkavalia <lkavalia@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: lkavalia <lkavalia@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 18:23:37 by lkavalia          #+#    #+#             */
-/*   Updated: 2022/09/14 13:08:14 by lkavalia         ###   ########.fr       */
+/*   Updated: 2023/06/10 12:16:56 by lkavalia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHILOSOPHERS_H
-# 
+# define PHILOSOPHERS_H
 
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <pthread.h>
-#include <sys/time.h>
+# include <stdio.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <pthread.h>
+# include <sys/time.h>
 
 typedef struct s_info
 {
@@ -27,15 +27,15 @@ typedef struct s_info
 	long long		time_to_sleep;		//miliseconds
 	long long		start;
 	pthread_mutex_t	*forks;
-	pthread_mutex_t message;
+	pthread_mutex_t	message;
 	pthread_mutex_t	death;
 	int				amount_of_meals;
 	int				death_counter;
-} t_info;
+}	t_info;
 
 typedef struct s_philosophers
 {
-	pthread_t 		philosopher;
+	pthread_t		philosopher;
 	int				nbr_of_philo;
 	int				index;
 	int				eaten_meals;
@@ -48,8 +48,7 @@ typedef struct s_philosophers
 	pthread_mutex_t	*left_fork;
 	pthread_mutex_t	*right_fork;
 	t_info			*philo_info;
-	
-} t_philosophers;
+}	t_philosophers;
 
 
 /*---- Functions from routine_functions.c --------------------*/
@@ -69,4 +68,6 @@ int			destroy_mutexes(t_info *info);
 size_t		ft_strlen(const char *c);
 void		error_message(char *message);
 int			ft_atoi(const char *str);
-long long	get_time();
+long long	get_time(void);
+
+#endif

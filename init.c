@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkavalia <lkavalia@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: lkavalia <lkavalia@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 20:19:25 by lkavalia          #+#    #+#             */
-/*   Updated: 2022/09/12 17:49:50 by lkavalia         ###   ########.fr       */
+/*   Updated: 2023/06/10 12:18:55 by lkavalia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,9 +105,9 @@ int	init_mutexes(t_info *info)
  * -------- 0 In case everything went succesfully.
  * --------	1 In case anything went wrong with the pthread_mutex_destroy.
  */
-int destroy_mutexes(t_info *info)
+int	destroy_mutexes(t_info *info)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < info->number_of_philo)
@@ -119,10 +119,6 @@ int destroy_mutexes(t_info *info)
 		}
 		i++;
 	}
-	//	if (pthread_mutex_destroy(philo->right_fork) != 0)
-	//		printf("errrorrr\n");
-	//	if (pthread_mutex_destroy(philo->left_fork) != 0)
-	//		printf("error line 96 left fork!\n");
 	if (pthread_mutex_destroy(&info->message) != 0)
 		printf("error message!\n");
 	if (pthread_mutex_destroy(&info->death) != 0)

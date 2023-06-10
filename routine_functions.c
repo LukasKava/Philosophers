@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   routine_functions.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lkavalia <lkavalia@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: lkavalia <lkavalia@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 10:31:34 by lkavalia          #+#    #+#             */
-/*   Updated: 2022/09/13 10:38:13 by lkavalia         ###   ########.fr       */
+/*   Updated: 2023/06/10 12:19:14 by lkavalia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -179,7 +179,7 @@ void	sleeping(t_philosophers *philo)
  */
 void	thinking(t_philosophers *philo)
 {
-	long long c_time;
+	long long	c_time;
 
 	pthread_mutex_lock(&philo->philo_info->message);
 	if (death_checker(philo) == 1)

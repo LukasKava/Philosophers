@@ -3,17 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lkavalia <lkavalia@student.42wolfsburg.    +#+  +:+       +#+         #
+#    By: lkavalia <lkavalia@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/24 18:43:55 by lkavalia          #+#    #+#              #
-#    Updated: 2022/09/13 10:22:47 by lkavalia         ###   ########.fr        #
+#    Updated: 2023/06/10 12:17:23 by lkavalia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= philo
 
 #LIBFT_PATH		= my_libft
-
 
 SRCS	= 	main.c \
 			init.c \
